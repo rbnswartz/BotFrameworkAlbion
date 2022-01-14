@@ -26,16 +26,6 @@ namespace BotFrameworkAlbion
         public StringExpression UserFound { get; set; }
         [JsonProperty("UserId")]
         public StringExpression UserId { get; set; }
-        [JsonProperty("PvPFame")]
-        public StringExpression PvPFame { get; set; }
-        [JsonProperty("PvEFame")]
-        public StringExpression PvEFame { get; set; }
-        [JsonProperty("CraftingFame")]
-        public StringExpression CraftingFame { get; set; }
-        [JsonProperty("GatheringFame")]
-        public StringExpression GatheringFame { get; set; }
-        [JsonProperty("FameRatio")]
-        public StringExpression FameRation { get; set; }
 
         public override async Task<DialogTurnResult> BeginDialogAsync(DialogContext dc, object options = null, CancellationToken cancellationToken = default)
         {
@@ -57,11 +47,6 @@ namespace BotFrameworkAlbion
             if (player != null)
             {
                 SafeSetOutput(dc, this.UserId, player.Id);
-                SafeSetOutput(dc, this.PvPFame, player.KillFame);
-                SafeSetOutput(dc, this.PvEFame, player.LifetimeStatistics.PvE.Total);
-                SafeSetOutput(dc, this.FameRation, player.FameRatio);
-                SafeSetOutput(dc, this.GatheringFame, player.LifetimeStatistics.Gathering.All.Total);
-                SafeSetOutput(dc, this.CraftingFame, player.LifetimeStatistics.Crafting.Total);
             }
             return await dc.EndDialogAsync();
         }

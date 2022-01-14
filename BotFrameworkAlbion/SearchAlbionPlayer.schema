@@ -20,26 +20,6 @@
             "$ref": "schema:#/definitions/stringExpression",
             "title": "User Id",
             "description": "The Id of the user found"
-        },
-        "PvPFame": {
-            "$ref": "schema:#/definitions/stringExpression",
-            "title": "PvP Fame",
-            "description": "The total kill fame of the found user"
-        },
-        "PvEFame": {
-            "$ref": "schema:#/definitions/stringExpression",
-            "title": "PvE Fame",
-            "description": "The total mob fame of the found user"
-        },
-        "CraftingFame": {
-            "$ref": "schema:#/definitions/stringExpression",
-            "title": "Crafting Fame",
-            "description": "The total amount of crafting fame of the found user"
-        },
-        "GatheringFame": {
-            "$ref": "schema:#/definitions/stringExpression",
-            "title": "Gathering Fame",
-            "description": "The total amount of gathering fame of the found user"
         }
     }
 }

@@ -13,6 +13,7 @@ namespace BotFrameworkAlbion
         public override void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
             services.AddSingleton<DeclarativeType>(sp => new DeclarativeType<SearchAlbionPlayer>(SearchAlbionPlayer.Kind));
+            services.AddSingleton<DeclarativeType>(sp => new DeclarativeType<GetAlbionPlayerInformation>(GetAlbionPlayerInformation.Kind));
         }
 
     }
